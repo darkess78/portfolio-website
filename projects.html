@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zach Adams | Projects</title>
+    <meta
+      name="description"
+      content="Selected projects by Zach Adams across automation, retrieval systems, databases, and infrastructure."
+    />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles/styles.css?v=20260326" data-theme-stylesheet />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="logo" href="index.html">ZA</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-controls" role="group" aria-label="Display and accessibility tools">
+        <div class="theme-menu-wrap">
+          <button
+            type="button"
+            class="theme-toggle"
+            data-theme-toggle
+            aria-label="Open theme picker and switch visual style"
+            title="Open theme picker and switch visual style"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            aria-controls="theme-menu"
+          >
+            <span aria-hidden="true">◐</span>
+          </button>
+          <div
+            class="theme-menu"
+            id="theme-menu"
+            data-theme-menu
+            role="menu"
+            aria-label="Theme selector"
+            hidden
+          ></div>
+        </div>
+        <div class="a11y-menu-wrap">
+          <button
+            type="button"
+            class="a11y-toggle"
+            data-a11y-toggle
+            aria-label="Open accessibility options"
+            title="Open accessibility options"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            aria-controls="a11y-menu"
+          >
+            <span aria-hidden="true">A</span>
+          </button>
+          <div
+            class="a11y-menu"
+            id="a11y-menu"
+            data-a11y-menu
+            role="menu"
+            aria-label="Accessibility options"
+            hidden
+          ></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-main" tabindex="-1">
+      <section class="section">
+        <p class="eyebrow">Projects</p>
+        <h1>Notable Project Work</h1>
+        <p class="section-lead">
+          Each project starts as a short overview card. Click Open project to zoom into that card and reveal full details.
+        </p>
+
+        <div class="grid projects-grid">
+          <!-- Hidden full details are reused inside the zoom modal. -->
+          <article class="card project-card" data-project-card>
+            <h3>Streamphones multi phone control toolkit</h3>
+            <p class="project-summary">
+              Built a Windows automation toolkit for controlling multiple Android
+              phones from one PC with ADB over TCP and scrcpy, including launch,
+              layout, monitoring, reconnect, and relaunch behavior.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  Streamphones automates multi phone management from a Windows PC
+                  using configuration driven device definitions and per device
+                  monitor loops. It handles WiFi drops, reboots, and scrcpy
+                  failures so a multi device setup remains usable without
+                  constant manual intervention.
+                </p>
+                <p>
+                  Devices are defined in a simple text format:
+                  <code>deviceName, ip:port</code>.
+                </p>
+                <div
+                  class="project-media-grid"
+                  aria-label="Streamphones screenshots"
+                >
+                  <figure class="project-media">
+                    <img
+                      src="images/streamphonesscreenshot.png"
+                      alt="Streamphones desktop layout with multiple mirrored device windows"
+                      loading="lazy"
+                    />
+                    <figcaption>
+                      Multi-window Streamphones layout with active device sessions.
+                    </figcaption>
+                  </figure>
+                  <figure class="project-media">
+                    <img
+                      src="images/streamphonesscreenshotCLI.png"
+                      alt="Streamphones command line prompt for launch and device selection"
+                      loading="lazy"
+                    />
+                    <figcaption>
+                      CLI controls for launch selection and monitor operations.
+                    </figcaption>
+                  </figure>
+                </div>
+                <h4>Impact</h4>
+                <p>
+                  This project turned a fragile manual setup into a stable
+                  dashboard style workflow where I can launch once and let the
+                  system self heal when connections drop.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Config driven device list and launch selection prompt</li>
+                  <li>Layout presets with predictable multi window positioning</li>
+                  <li>Per device monitor loop with scrcpy health checks</li>
+                  <li>ADB reconnect loop with network reachability checks</li>
+                  <li>Session IDs and lock files to prevent duplicate monitors</li>
+                  <li>Shutdown flag support for clean exits</li>
+                  <li>Optional brightness adjustment for unattended viewing</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Windows batch scripting, ADB over
+                  TCP, scrcpy, PowerShell networking checks, configuration driven
+                  orchestration
+                </p>
+                <h4>Skills demonstrated</h4>
+                <ul>
+                  <li>Windows automation and process orchestration</li>
+                  <li>Reliability patterns with monitors, restart logic, and locks</li>
+                  <li>Network aware reconnect tooling for TCP device endpoints</li>
+                  <li>Configuration driven scaling for multi device workflows</li>
+                  <li>Practical ADB and scrcpy operations in real conditions</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Game automation framework</h3>
+            <p class="project-summary">
+              Built a modular Java game automation framework that handles task
+              flows, interaction selection, and UI edge cases using state based
+              logic and robust runtime checks.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I developed task nodes for a game automation framework with
+                  reliable progression through interaction trees and UI prompts
+                  that often cause runs to stall. I prioritized continuing
+                  interactions when possible, then selecting options as a
+                  fallback. I also added post flow widget cleanup so scripts
+                  can continue without manual intervention.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>State based task flow with clear transitions</li>
+                  <li>Interaction handling that checks continue before option selection</li>
+                  <li>Widget interaction for dismissing completion prompts</li>
+                  <li>Logging and debugging hooks for stuck states</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Java, client API integration, UI
+                  widget interaction, state machines, logging
+                </p>
+                <h4>Resume bullets</h4>
+                <ul>
+                  <li>
+                    Implemented automation nodes with reliable interaction
+                    selection and continuation checks to prevent stall loops
+                  </li>
+                  <li>
+                    Added UI widget handling to close completion prompts
+                    automatically and resume navigation
+                  </li>
+                  <li>
+                    Improved script stability by introducing explicit state
+                    gating so preparation steps only run when required
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>MCP/RAG documentation and community retrieval server</h3>
+            <p class="project-summary">
+              Built an MCP compatible ingestion and RAG retrieval pipeline
+              backed by PostgreSQL to support LLM assisted development using
+              indexed documentation and community content.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I created a server side pipeline to ingest documentation and
+                  community data into PostgreSQL for development search
+                  workflows. I validated ingestion quality with SQL checks and
+                  identified rows where cleaned content was missing even when
+                  raw content existed, then used those results to guide
+                  pipeline fixes.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Ingestion validation with SQL counts and null checks</li>
+                  <li>Raw content and cleaned content field separation</li>
+                  <li>Focus on RAG retrieval quality for developer questions</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Python, PostgreSQL, MCP tooling,
+                  SQL validation queries, ingestion pipelines
+                </p>
+                <h4>Resume bullets</h4>
+                <ul>
+                  <li>
+                    Built a Postgres backed knowledge store for documentation and
+                    community content to improve LLM assisted coding workflows
+                  </li>
+                  <li>
+                    Used SQL auditing queries to detect ingestion failures where
+                    cleaned text was missing and prioritized fixes
+                  </li>
+                  <li>
+                    Designed schema and pipeline steps to support future indexing
+                    and retrieval improvements
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Neo4j relationships and graph queries</h3>
+            <p class="project-summary">
+              Created and queried graph relationships in Neo4j to group and
+              retrieve contacts by derived attributes such as area codes.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I wrote Cypher queries to match contacts by properties, create
+                  relationships based on shared area codes, query contacts by
+                  relationship membership, and remove relationships when
+                  requirements changed. The scripts were designed for repeatable
+                  execution with consistent results.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Relationship creation from property driven rules</li>
+                  <li>Combined relationship and property filtering queries</li>
+                  <li>Relationship deletion and rebuild workflows</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Neo4j, Cypher
+                </p>
+                <h4>Resume bullets</h4>
+                <ul>
+                  <li>
+                    Authored Cypher scripts to create and query area code
+                    relationships among contact nodes
+                  </li>
+                  <li>
+                    Built queries that return node data based on relationship
+                    membership and attribute filters
+                  </li>
+                  <li>
+                    Implemented relationship deletion steps to keep the graph
+                    consistent as rules evolved
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>High Tech Cobblemon modded Minecraft server</h3>
+            <p class="project-summary">
+              High Tech Cobblemon is a custom Linux hosted Minecraft server with
+              roughly 400 mods, built to stay stable, playable, and maintainable
+              despite a very heavy mod load.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I set up and ran a heavily modded Minecraft server on Linux
+                  for the High Tech Cobblemon pack, managing a large mod list
+                  and the server environment needed to keep it running
+                  reliably. The work focused on practical server operations,
+                  compatibility management, and keeping performance acceptable
+                  for real players.
+                </p>
+                <h4>Skills demonstrated</h4>
+                <ul>
+                  <li>Linux server administration for game servers</li>
+                  <li>Modpack and dependency management at large scale</li>
+                  <li>Troubleshooting startup crashes and mod conflicts</li>
+                  <li>Performance minded hosting and stability practices</li>
+                  <li>Repeatable setup, config management, and maintenance</li>
+                </ul>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Tuned Java memory and startup options for large mod loads</li>
+                  <li>Used crash logs to resolve conflicts and stabilize launches</li>
+                  <li>Maintained restart, backup, and maintenance routines</li>
+                  <li>Configured networking and access controls for players</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Linux, Minecraft server
+                  administration, Java runtime tuning, modpack operations,
+                  configuration management
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Homelab operations and service reliability</h3>
+            <p class="project-summary">
+              Maintained homelab services with containerization, VMs, mount
+              management, and permission troubleshooting across Linux and
+              Unraid.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I operate containerized workloads and virtual machines with a
+                  focus on repeatable deployment, permission safety, and service
+                  continuity. Work includes mount mapping, volume strategy,
+                  networking setup, and root cause analysis when services fail
+                  due to host level constraints.
+                </p>
+                <div
+                  class="project-media-grid"
+                  aria-label="Homelab infrastructure screenshots"
+                >
+                  <figure class="project-media">
+                    <img
+                      src="images/vms.png"
+                      alt="Homelab virtual machine panel showing multiple services and resource status"
+                      loading="lazy"
+                    />
+                    <figcaption>
+                      VM view used to monitor service isolation and host utilization.
+                    </figcaption>
+                  </figure>
+                  <figure class="project-media">
+                    <img
+                      src="images/proxmox.png"
+                      alt="Proxmox dashboard showing homelab nodes and virtualized workloads"
+                      loading="lazy"
+                    />
+                    <figcaption>
+                      Proxmox host view used for VM orchestration and infrastructure management.
+                    </figcaption>
+                  </figure>
+                </div>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Container lifecycle management with reproducible configs</li>
+                  <li>Volume and SMB mount strategy for persistent data</li>
+                  <li>Permission debugging across host and container boundaries</li>
+                  <li>VM management and service isolation for lab workloads</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Docker, docker compose, Linux,
+                  Unraid, Proxmox, SMB mounts, volume permissions
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Sonarr language custom formats and tagging logic</h3>
+            <p class="project-summary">
+              Implemented maintainable language based custom formats and tagging
+              logic in Sonarr to classify dual audio, partial dual audio, dub,
+              and sub releases.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I configured Sonarr with custom formats inspired by community
+                  standards and split dual audio detection into language pair
+                  formats. I used tags to reflect content reality across dual,
+                  partial, dub, and sub signals while avoiding conflicting tags
+                  when releases include mixed attributes.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Language pair custom formats for stronger classification</li>
+                  <li>Tag semantics aligned to actual audio and subtitle coverage</li>
+                  <li>Portable Docker based setup on Unraid</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Sonarr, Docker, Unraid, custom
+                  formats, tagging rules
+                </p>
+                <h4>Resume bullets</h4>
+                <ul>
+                  <li>
+                    Designed language detection custom formats and tags to
+                    classify dual audio and sub only releases reliably
+                  </li>
+                  <li>
+                    Implemented tag logic that avoids false signals while still
+                    capturing mixed language edge cases
+                  </li>
+                  <li>
+                    Deployed and maintained the workflow in Docker on Unraid for
+                    consistent automation
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Database design and query projects</h3>
+            <p class="project-summary">
+              Designed relational schemas from ER models and wrote SQL scripts to
+              enforce integrity and answer analytical queries.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I completed coursework projects covering conceptual modeling,
+                  ER diagrams, table creation with constraints, controlled
+                  primary key strategies, referential integrity testing, and
+                  complex queries. I also worked with Sakila style data for join,
+                  aggregation, and subquery assignments.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>ER model to schema translation</li>
+                  <li>Referential integrity and null behavior testing</li>
+                  <li>Join heavy query sets with aggregation and subqueries</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> MySQL, SQL, relational modeling,
+                  Sakila dataset
+                </p>
+                <h4>Resume bullets</h4>
+                <ul>
+                  <li>
+                    Built normalized relational schemas from ER diagrams and
+                    validated data integrity with constraint tests
+                  </li>
+                  <li>
+                    Authored SQL query scripts using joins, aggregation, and
+                    subqueries to solve dataset driven prompts
+                  </li>
+                  <li>
+                    Tested edge conditions including null handling and
+                    referential integrity enforcement
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Real time video streaming and object recognition pipeline</h3>
+            <p class="project-summary">
+              Designed a low latency streaming pipeline and planned real time
+              object recognition overlays, focused on smooth frame delivery and
+              performance tuning.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I built a practical streaming setup where FFmpeg repeatedly
+                  overwrites a single JPEG frame and serves it through an MJPEG
+                  server. I tested ZeroMQ buffering adjustments for smoother
+                  playback and then planned a threaded decode approach to
+                  separate decoding from transport and reduce stalls.
+                </p>
+                <p>
+                  FFmpeg writes frames at about 10 fps to
+                  <code>/tmp/mjpeg_frames/frame.jpg</code>, served via
+                  <code>mjpg-streamer</code> using the <code>input_file</code>
+                  plugin on port <code>8082</code>.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>MJPEG frame overwrite pattern for low overhead live preview</li>
+                  <li>ZeroMQ transport tuning for smoother playback</li>
+                  <li>Threading plan to isolate decode work and stabilize flow</li>
+                  <li>Targeted continuous detection with bounding box overlays</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Python, FFmpeg, MJPEG streaming,
+                  ZeroMQ tuning, threaded design
+                </p>
+                <h4>Resume bullets</h4>
+                <ul>
+                  <li>
+                    Built a real time MJPEG streaming pipeline using FFmpeg
+                    frame generation and mjpg streamer for live preview
+                  </li>
+                  <li>
+                    Tuned transport buffering to improve smoothness and tracked
+                    artifact tradeoffs for the next iteration
+                  </li>
+                  <li>
+                    Planned a threaded decode architecture to reduce stalls and
+                    improve visual stability for overlay workflows
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Windows device toggle automation for foot pedal workflow</h3>
+            <p class="project-summary">
+              Automated Windows device enable and disable actions using pnputil
+              to support controlled macro workflow behavior.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I developed a workflow to disable and re enable a specific HID
+                  device using pnputil after alternate disable approaches failed
+                  due to device criticality checks. This supported safe timed
+                  toggling as part of a larger automation pipeline.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>CLI device control using exact hardware instance ids</li>
+                  <li>Method failure debugging and approach replacement</li>
+                  <li>Timed toggle support for macro pipeline control</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Python, Windows, pnputil, HID
+                  device management
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Data structures and algorithms implementations</h3>
+            <p class="project-summary">
+              Implemented core data structures from scratch and debugged edge
+              cases with testing oriented workflows and careful validation.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  I built a sorted list ADT in Python with insertion, removal,
+                  search, iteration, and indexed access. I also implemented a
+                  validated Course ADT, debugged binary search tree edge cases,
+                  and built a custom HashMap ADT to cache recursive calculations
+                  for large speedups.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>Input validation and defensive programming</li>
+                  <li>Custom iterability and index support</li>
+                  <li>Hash based caching to reduce redundant recursion work</li>
+                  <li>Debugging of tree edge cases</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Python, data structures,
+                  recursion optimization, testing mindset
+                </p>
+                <h4>Resume bullets</h4>
+                <ul>
+                  <li>
+                    Built from scratch data structures with validation,
+                    iteration, and sorted behavior, then fixed edge case
+                    failures
+                  </li>
+                  <li>
+                    Implemented caching strategies that reduced repeated
+                    recursion work and improved runtime performance
+                  </li>
+                  <li>
+                    Diagnosed and corrected tree removal edge cases, including
+                    root replacement and traversal consistency
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Zoom modal shown when a project card is opened. -->
+    <div class="project-overlay" data-project-overlay aria-hidden="true" hidden>
+      <button
+        class="project-overlay-backdrop"
+        type="button"
+        data-project-close
+        aria-label="Close project details"
+      ></button>
+      <article
+        class="card project-modal"
+        id="project-modal"
+        data-project-modal
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-modal-title"
+        tabindex="-1"
+      >
+        <button
+          class="project-modal-close"
+          type="button"
+          data-project-close
+          aria-label="Close project details"
+        >
+          Close
+        </button>
+        <p class="eyebrow">Project Details</p>
+        <h2 id="project-modal-title" data-project-modal-title></h2>
+        <p class="project-summary" data-project-modal-summary></p>
+        <div class="project-modal-details" data-project-modal-details></div>
+      </article>
+    </div>
+
+    <!-- Screenshot lightbox shown when project screenshots are clicked. -->
+    <div
+      class="project-image-overlay"
+      data-project-image-overlay
+      aria-hidden="true"
+      hidden
+    >
+      <button
+        class="project-image-backdrop"
+        type="button"
+        data-project-image-close
+        aria-label="Close screenshot preview"
+      ></button>
+      <figure
+        class="card project-image-modal"
+        id="project-image-modal"
+        data-project-image-modal
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-image-caption"
+        tabindex="-1"
+      >
+        <button
+          class="project-image-close"
+          type="button"
+          data-project-image-close
+          aria-label="Close screenshot preview"
+        >
+          Close
+        </button>
+        <img src="" alt="" data-project-image-modal-img />
+        <figcaption id="project-image-caption" data-project-image-modal-caption>
+        </figcaption>
+      </figure>
+    </div>
+
+    <footer class="site-footer">
+      <small>&copy; <span id="year"></span> Zach Adams</small>
+    </footer>
+
+    <div class="sr-only" data-a11y-status aria-live="polite"></div>
+    <script src="script.js?v=20260326"></script>
+  </body>
+</html>

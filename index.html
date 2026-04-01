@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zach Adams | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio homepage for Zach Adams, junior in Computational Data Science focused on automation and systems engineering."
+    />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles/styles.css?v=20260326" data-theme-stylesheet />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="logo" href="index.html">ZA</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-controls" role="group" aria-label="Display and accessibility tools">
+        <div class="theme-menu-wrap">
+          <button
+            type="button"
+            class="theme-toggle"
+            data-theme-toggle
+            aria-label="Open theme picker and switch visual style"
+            title="Open theme picker and switch visual style"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            aria-controls="theme-menu"
+          >
+            <span aria-hidden="true">◐</span>
+          </button>
+          <div
+            class="theme-menu"
+            id="theme-menu"
+            data-theme-menu
+            role="menu"
+            aria-label="Theme selector"
+            hidden
+          ></div>
+        </div>
+        <div class="a11y-menu-wrap">
+          <button
+            type="button"
+            class="a11y-toggle"
+            data-a11y-toggle
+            aria-label="Open accessibility options"
+            title="Open accessibility options"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            aria-controls="a11y-menu"
+          >
+            <span aria-hidden="true">A</span>
+          </button>
+          <div
+            class="a11y-menu"
+            id="a11y-menu"
+            data-a11y-menu
+            role="menu"
+            aria-label="Accessibility options"
+            hidden
+          ></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-main" tabindex="-1">
+      <section class="hero section">
+        <p class="eyebrow">Portfolio</p>
+        <h1>
+          Zach Adams
+          <span>Automation and Systems Engineering</span>
+        </h1>
+        <p class="hero-copy">
+          Junior in college at Utah Valley University majoring in Computational
+          Data Science. I build practical software systems with clear
+          documentation and iterative improvement.
+        </p>
+        <p class="hero-meta">
+          Focus areas include automation, data systems, and reliability.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="projects.html">View Projects</a>
+          <a class="button button-ghost" href="contact.html">Get In Touch</a>
+        </div>
+      </section>
+
+      <section class="section compact-section">
+        <h2>Explore</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>About</h3>
+            <p>Strengths, workflow, and current technical direction.</p>
+            <a href="about.html">Read About</a>
+          </article>
+          <article class="card">
+            <h3>Skills</h3>
+            <p>Languages, platforms, and domain experience.</p>
+            <a href="skills.html">View Skills</a>
+          </article>
+          <article class="card">
+            <h3>Education</h3>
+            <p>Current degree track and coursework focus.</p>
+            <a href="education.html">View Education</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>&copy; <span id="year"></span> Zach Adams</small>
+    </footer>
+
+    <div class="sr-only" data-a11y-status aria-live="polite"></div>
+    <script src="script.js?v=20260326"></script>
+  </body>
+</html>
