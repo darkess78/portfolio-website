@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Personal portfolio site for Zach Adams — a junior at Utah Valley University majoring in Computational Data Science, focused on automation and systems engineering.
+Personal portfolio site for Zach Adams — a senior at Utah Valley University majoring in Computational Data Science, focused on automation and systems engineering.
 
 Live at: **https://neety.me**
 

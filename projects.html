@@ -86,6 +86,53 @@
         <div class="grid projects-grid">
           <!-- Hidden full details are reused inside the zoom modal. -->
           <article class="card project-card" data-project-card>
+            <h3>Gamma: Shana AI assistant runtime</h3>
+            <p class="project-summary">
+              Personal project: a Python runtime for a persistent AI assistant
+              with text and live voice conversation, selective memory, a
+              stable persona, and an optional streaming control plane.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  The system runs as two applications: an assistant API that
+                  owns conversation, memory, and voice, and a dashboard that
+                  handles login, process control, and configuration. The
+                  dashboard reaches the assistant only through its HTTP API.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>
+                    Swappable LLM, speech to text, and text to speech providers:
+                    local models (Ollama, Faster-Whisper, Piper) or hosted
+                    OpenAI APIs
+                  </li>
+                  <li>Selective long term memory in SQLite and a Discord ingestion worker</li>
+                  <li>
+                    Conversation decisions kept separate from delivered text, so
+                    display and speech output route to explicit consumers,
+                    including a performer output bus for streaming
+                  </li>
+                  <li>
+                    A coding practice loop where a local model edits sandboxed
+                    exercises, checks run in a read-only Bubblewrap namespace
+                    with systemd resource limits, and failures become lessons
+                    for the next cycle
+                  </li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Python, FastAPI, Uvicorn, SQLite,
+                  Ollama, Faster-Whisper, Piper, OpenAI APIs, Bubblewrap,
+                  systemd
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
             <h3>Family Shared Care home care app (internship)</h3>
             <p class="project-summary">
               Software engineering internship at Family Shared Care: a family
@@ -143,54 +190,7 @@
           </article>
 
           <article class="card project-card" data-project-card>
-            <h3>Shana persistent AI assistant runtime</h3>
-            <p class="project-summary">
-              Personal project: a Python runtime for a persistent AI assistant
-              with text and live voice conversation, selective memory, a
-              stable persona, and an optional streaming control plane.
-            </p>
-            <button type="button" class="project-open" data-project-open>
-              Open project
-            </button>
-            <div class="project-details" hidden>
-              <div class="project-details-inner">
-                <p>
-                  The system runs as two applications: an assistant API that
-                  owns conversation, memory, and voice, and a dashboard that
-                  handles login, process control, and configuration. The
-                  dashboard reaches the assistant only through its HTTP API.
-                </p>
-                <h4>Highlights</h4>
-                <ul>
-                  <li>
-                    Swappable LLM, speech to text, and text to speech providers:
-                    local models (Ollama, Faster-Whisper, Piper) or hosted
-                    OpenAI APIs
-                  </li>
-                  <li>Selective long term memory in SQLite and a Discord ingestion worker</li>
-                  <li>
-                    Conversation decisions kept separate from delivered text, so
-                    display and speech output route to explicit consumers,
-                    including a performer output bus for streaming
-                  </li>
-                  <li>
-                    A coding practice loop where a local model edits sandboxed
-                    exercises, checks run in a read-only Bubblewrap namespace
-                    with systemd resource limits, and failures become lessons
-                    for the next cycle
-                  </li>
-                </ul>
-                <p class="project-stack">
-                  <strong>Tech stack:</strong> Python, FastAPI, Uvicorn, SQLite,
-                  Ollama, Faster-Whisper, Piper, OpenAI APIs, Bubblewrap,
-                  systemd
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <article class="card project-card" data-project-card>
-            <h3>Manga localization editor</h3>
+            <h3>Manga Localizer</h3>
             <p class="project-summary">
               Personal project in progress: a Windows Qt editor and an
               authenticated HTTPS service for manga localization, from chapter
