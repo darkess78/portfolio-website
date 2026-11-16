@@ -86,6 +86,152 @@
         <div class="grid projects-grid">
           <!-- Hidden full details are reused inside the zoom modal. -->
           <article class="card project-card" data-project-card>
+            <h3>Family Shared Care home care app (internship)</h3>
+            <p class="project-summary">
+              Software engineering internship at Family Shared Care: a family
+              home care coordination app built in React and TypeScript,
+              packaged for Android and iOS with Capacitor, on a Supabase
+              backend.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  Since April 2026 I have worked remotely on Family Shared Care,
+                  an app that helps families coordinate care for a loved one.
+                  It covers medications, appointments, health logs, family
+                  chat, and caregiver management. One web codebase ships as a
+                  web app and as native Android and iOS apps.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>
+                    Supabase Edge Functions for Stripe checkout and webhooks,
+                    Google Play and Apple App Store purchase verification, and
+                    caregiver invitations
+                  </li>
+                  <li>
+                    Push notifications for family chat and timed task and
+                    appointment reminders across Android, iOS (APNs), and web,
+                    with per device notification type preferences
+                  </li>
+                  <li>
+                    Database migrations with row level security, invited
+                    caregiver and viewer account roles, and an account deletion
+                    request queue with admin review
+                  </li>
+                  <li>
+                    Hosted iOS builds and TestFlight uploads through Codemagic
+                  </li>
+                  <li>Vitest coverage for pages and billing logic</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> React 18, TypeScript, Vite,
+                  Tailwind CSS, shadcn/ui, Capacitor, Supabase (Postgres, Edge
+                  Functions), Stripe, Vitest, Codemagic
+                </p>
+                <h4>Skills demonstrated</h4>
+                <ul>
+                  <li>Full stack web and mobile development from one codebase</li>
+                  <li>Payment and in-app purchase integration across three stores</li>
+                  <li>Database access control with row level security</li>
+                  <li>Native push notification setup on Android and iOS</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Shana persistent AI assistant runtime</h3>
+            <p class="project-summary">
+              Personal project: a Python runtime for a persistent AI assistant
+              with text and live voice conversation, selective memory, a
+              stable persona, and an optional streaming control plane.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  The system runs as two applications: an assistant API that
+                  owns conversation, memory, and voice, and a dashboard that
+                  handles login, process control, and configuration. The
+                  dashboard reaches the assistant only through its HTTP API.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>
+                    Swappable LLM, speech to text, and text to speech providers:
+                    local models (Ollama, Faster-Whisper, Piper) or hosted
+                    OpenAI APIs
+                  </li>
+                  <li>Selective long term memory in SQLite and a Discord ingestion worker</li>
+                  <li>
+                    Conversation decisions kept separate from delivered text, so
+                    display and speech output route to explicit consumers,
+                    including a performer output bus for streaming
+                  </li>
+                  <li>
+                    A coding practice loop where a local model edits sandboxed
+                    exercises, checks run in a read-only Bubblewrap namespace
+                    with systemd resource limits, and failures become lessons
+                    for the next cycle
+                  </li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Python, FastAPI, Uvicorn, SQLite,
+                  Ollama, Faster-Whisper, Piper, OpenAI APIs, Bubblewrap,
+                  systemd
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
+            <h3>Manga localization editor</h3>
+            <p class="project-summary">
+              Personal project in progress: a Windows Qt editor and an
+              authenticated HTTPS service for manga localization, from chapter
+              import through OCR, translation, lettering, and CBZ export.
+            </p>
+            <button type="button" class="project-open" data-project-open>
+              Open project
+            </button>
+            <div class="project-details" hidden>
+              <div class="project-details-inner">
+                <p>
+                  The editor imports chapters, keeps source images in durable
+                  storage, and sends work to a separate service for model
+                  execution. Untrusted files are never parsed in the main
+                  process.
+                </p>
+                <h4>Highlights</h4>
+                <ul>
+                  <li>
+                    Untrusted image and archive parsing isolated in a sandboxed
+                    Windows AppContainer with memory and CPU limits
+                  </li>
+                  <li>Durable chapter storage with saved-text undo and redo</li>
+                  <li>Draft lettering with licensed fonts</li>
+                  <li>
+                    Folder import, source passage cleanup review, guarded
+                    chapter jobs, and portable draft exports with verified
+                    recovery
+                  </li>
+                  <li>A supervised Linux runtime for the service with protected connection storage</li>
+                </ul>
+                <p class="project-stack">
+                  <strong>Tech stack:</strong> Python, PyQt, OCR, machine
+                  translation, HTTPS, Windows AppContainer
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project-card" data-project-card>
             <h3>Streamphones multi phone control toolkit</h3>
             <p class="project-summary">
               Built a Windows automation toolkit for controlling multiple Android
